@@ -70,9 +70,10 @@ app.post('/api/duel', (req, res) => {
             playerRecord.losses++
             res.status(200).send('You won!')
         }
+
     } catch (error) {
-        rollbar.warning('ERROR DUELING')
-        console.log('ERROR DUELING', error)
+        rollbar.warning('ERRORS DUELING')
+        console.log('ERRORS DUELING', error)
         res.sendStatus(400)
     }
 })
